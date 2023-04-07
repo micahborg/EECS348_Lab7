@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html>
+    <!-- Make a profile page that is styled with CSS. Have fun with this. In your profile, you need to
+    include your name, a photo, and contact info and showcase anything good for your professional
+    career, e.g., courses, projects, and work experience... You could also use JS and PHP in this
+    practice. At the same time, you must include at least one link and video. -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(227, 227, 227);
+        }
+
+        /* Style the header */
+        header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+        }
+
+        /* Container for flexboxes */
+        section {
+        display: -webkit-flex;
+        display: flex;
+        }
+
+        /* Style the navigation menu */
+        nav {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background: #ccc;
+        padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+        list-style-type: none;
+        padding: 0;
+        }
+
+        /* Style the content */
+        article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-color: #f1f1f1;
+        padding: 10px;
+        }
+
+        /* Style the footer */
+        footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        }
+    </style>
     <head>
-        <title>Practice 1</title>
+        <title>Micah Borghese</title>
     </head>
     <body>
-        <h1>Practice 1</h1>
-        <p>My name is <strong>Micah</strong> and I am a <em>student</em> at <a href="http://www.ku.edu">KU</a>.</p>
+        <header>
+            <h1>Micah Borghese</h1>
+        </header>
+
+        <section>
+            <nav>
+                <p>My name is <strong>Micah</strong> and I am a sophomore at <a href="http://www.ku.edu">KU</a>.</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/micah-borghese/">LinkedIn</a></li>
+                </ul>
+            </nav>
+            <article>
+                <img src="headshot.jpg" alt="headshot" width="200" height="300">
+            </article>
+        </section>
+        <footer>
+            <p>Created for EECS 348 in April 2023</p>
+        </footer>
     </body>
 </html>
