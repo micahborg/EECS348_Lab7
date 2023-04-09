@@ -47,9 +47,29 @@
     
     <section>  
         <article>
-        <h1>London</h1>
-        <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+        <h1>Enter Your Password:</h1>
+        <form>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <label for="password2">Re-enter Password:</label>
+            <input type="password" id="password2" name="password2"><br><br>
+            <input onclick="validate()" type="submit" value="Validate Password">
+        </form>
+        <script>
+            function validate() {
+                var password = document.getElementById("password").value;
+                var password2 = document.getElementById("password2").value;
+                
+                if (password.length < 8) {
+                    alert("Password must be at least 8 characters long.");
+                } else if (password != password2) {
+                    alert("Passwords do not match.");
+                } else {
+                    alert("Passwords match!");
+                }
+            }
+        </script>
+
         </article>
     </section>
     
