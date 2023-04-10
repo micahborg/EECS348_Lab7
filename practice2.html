@@ -55,36 +55,26 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum efficitur magna et rhoncus. Vivamus feugiat augue non diam convallis luctus. Nam convallis, metus laoreet convallis congue, tortor magna fringilla mi, sit amet tincidunt libero erat venenatis eros. Sed placerat mauris et ornare volutpat. Curabitur semper justo a diam dictum ullamcorper. Suspendisse potenti. Nam gravida metus ullamcorper risus dictum, nec fringilla est eleifend.
             </div>
             
-            <form>
-                <label for="borderr">Border R(0-255):</label>
-                <input type="text" id="borderr" name="borderr"><br>
-                <label for="borderg">Border G(0-255):</label>
-                <input type="text" id="borderg" name="borderg"><br>
-                <label for="borderb">Border B(0-255):</label>
-                <input type="text" id="borderb" name="borderb"><br>
-                <label for="border-width">Border Width:</label>
-                <input type="text" id="border-width" name="border-width"><br>
-                <label for="backgroundr">Background R(0-255):</label>
-                <input type="text" id="backgroundr" name="backgroundr"><br>
-                <label for="backgroundg">Background G(0-255):</label>
-                <input type="text" id="backgroundg" name="backgroundg"><br>
-                <label for="backgroundb">Background B(0-255):</label>
-                <input type="text" id="backgroundb" name="backgroundb"><br>
-                <input onclick="myForm()" type="submit" value="Change the color!">
-            </form>
+            <script type="text/javascript">
+                function myForm() {
+                    document.getElementById("pg").style.borderColor = "rgb(" + document.getElementById("borderr").value + "," + document.getElementById("borderg").value + "," + document.getElementById("borderb").value + ")";
+                    document.getElementById("pg").style.borderWidth = document.getElementById("border_width").value + "px";
+                    document.getElementById("pg").style.backgroundColor = "rgb(" + document.getElementById("backgroundr").value + "," + document.getElementById("backgroundg").value + "," + document.getElementById("backgroundb").value + ")";
+                }
+            </script>
+            Border R(0-255): <input type="text" id="borderr" value=""> <br>
+            Border G(0-255): <input type="text" id="borderg" value=""> <br>
+            Border B(0-255): <input type="text" id="borderb" value=""> <br>
+            Border Width: <input type="text" id="border_width" value=""> <br>
+            Background R(0-255): <input type="text" id="backgroundr" value=""> <br>
+            Background G(0-255): <input type="text" id="backgroundg" value=""> <br>
+            Background B(0-255): <input type="text" id="backgroundb" value=""> <br>
+            <button onclick="myForm()">Change the color!</button> <br>
         </article>
     </section>
     
     <footer>
         <p>Created for EECS 348 in April 2023</p>
     </footer>
-    <script>
-        function myForm() {
-            document.getElementById("pg").style.borderColor = "rgb(" + document.getElementById("borderr").value + "," + document.getElementById("borderg").value + "," + document.getElementById("borderb").value + ")";
-            document.getElementById("pg").style.borderWidth = document.getElementById("border-width").value + "px";
-            document.getElementById("pg").style.backgroundColor = "rgb(" + document.getElementById("backgroundr").value + "," + document.getElementById("backgroundg").value + "," + document.getElementById("backgroundb").value + ")";
-        }
-    </script>
     </body>
-            
 </html>
